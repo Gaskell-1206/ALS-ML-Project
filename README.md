@@ -7,14 +7,14 @@ Certain fields in the raw input data contain invalid or inconsistent values.  Ac
 + We delete “pct_of_Normal_Trial” in FVC and SVC
 + We only consider the “Delta” <= 92 (first 3 months after onset)
 + We recoded variables to binary variables in Demo:
-++ sex_male: Male=1, Female=0, no missing
-++ race_white: white=1, all others or missing=0
-++ race_black: black=1, all others or missing=0
-++ race_asian: asian=1, all others or missing=0
-++ race_other: 1 include American Indian/Alaska Native, Hawaiian/Pacific Islander, unknown, other, all others=0
-++ race_missing: missing=1, no missing=0
-++ study_arm_active: Active=1, Placebo=0 (From Treatment.csv)
-++ Height_cm and BMI_baseline: values at delta=0 (From vital data)
+  - sex_male: Male=1, Female=0, no missing
+  - race_white: white=1, all others or missing=0
+  - race_black: black=1, all others or missing=0
+  - race_asian: asian=1, all others or missing=0
+  - race_other: 1 include American Indian/Alaska Native, Hawaiian/Pacific Islander, unknown, other, all others=0
+  - race_missing: missing=1, no missing=0
+  - study_arm_active: Active=1, Placebo=0 (From Treatment.csv)
+  - Height_cm and BMI_baseline: values at delta=0 (From vital data)
 (Data Cleansing/Data processing_Static_Demo.R)
 # Missing Value and Standardization
 ## Median Imputation
