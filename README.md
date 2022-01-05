@@ -7,14 +7,14 @@ Certain fields in the raw input data contain invalid or inconsistent values.  Ac
 + We delete “pct_of_Normal_Trial” in FVC and SVC
 + We only consider the “Delta” <= 92 (first 3 months after onset)
 + We recoded variables to binary variables in Demo:
- + sex_male: Male=1, Female=0, no missing
- + race_white: white=1, all others or missing=0
- + race_black: black=1, all others or missing=0
- + race_asian: asian=1, all others or missing=0
- + race_other: 1 include American Indian/Alaska Native, Hawaiian/Pacific Islander, unknown, other, all others=0
- + race_missing: missing=1, no missing=0
- + study_arm_active: Active=1, Placebo=0 (From Treatment.csv)
- + Height_cm and BMI_baseline: values at delta=0 (From vital data)
+++ sex_male: Male=1, Female=0, no missing
+++ race_white: white=1, all others or missing=0
+++ race_black: black=1, all others or missing=0
+++ race_asian: asian=1, all others or missing=0
+++ race_other: 1 include American Indian/Alaska Native, Hawaiian/Pacific Islander, unknown, other, all others=0
+++ race_missing: missing=1, no missing=0
+++ study_arm_active: Active=1, Placebo=0 (From Treatment.csv)
+++ Height_cm and BMI_baseline: values at delta=0 (From vital data)
 (Data Cleansing/Data processing_Static_Demo.R)
 # Missing Value and Standardization
 ## Median Imputation
@@ -159,13 +159,13 @@ Neural Network Framework:
 (Model Training/Neural Network.ipynb)
 # Evaluation Metrics
 We use following metrics to evaluate model performance: 
-𝑅^2: It is a measure of the linear relationship between X and Y. It is interpreted as the proportion of the variance in the dependent variable that is predictable from the independent variable.
-R2 = metrics.r2_score(y_test, y_pred)}
++ 𝑅^2: It is a measure of the linear relationship between X and Y. It is interpreted as the proportion of the variance in the dependent variable that is predictable from the independent variable.
++ R2 = metrics.r2_score(y_test, y_pred)}
 Adjusted 𝑅^2:The adjusted R-squared compares the explanatory power of regression models that contain different numbers of predictors.
-MAE: It is the mean of the absolute value of the errors. It measures the difference between two continuous variables, here actual and predicted values of y.
-MSE: The mean square error (MSE) is just like the MAE, but squares the difference before summing them all instead of using the absolute value.
-RMSE: The mean square error (MSE) is just like the MAE, but squares the difference before summing them all instead of using the absolute value.
-Pearson Correlation: Pearson's correlation ρ is a relative measure that evaluates how well a prediction method is able to recover ALSFRS trends across patients. Better predictions lead to a higher value of the correlation, up to 1.0 for the perfect prediction.
++ MAE: It is the mean of the absolute value of the errors. It measures the difference between two continuous variables, here actual and predicted values of y.
++ MSE: The mean square error (MSE) is just like the MAE, but squares the difference before summing them all instead of using the absolute value.
++ RMSE: The mean square error (MSE) is just like the MAE, but squares the difference before summing them all instead of using the absolute value.
++ Pearson Correlation: Pearson's correlation ρ is a relative measure that evaluates how well a prediction method is able to recover ALSFRS trends across patients. Better predictions lead to a higher value of the correlation, up to 1.0 for the perfect prediction.
 (Evaluation Metrics.ipynb)
 
 
