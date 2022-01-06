@@ -38,17 +38,17 @@ Another measure of lung function is slow vital capacity(SVC). Slow vital capacit
 We ignore records missing either a delta value or a measurement value. In addition, when two records have the same delta value, we keep only the first record
 For each time series field, we also calculate a derivative time series of pairwise slopes. That is, for each temporally consecutive pair of measurement values, we compute (second measurement value - first measurement value)/(second delta value - first delta value) and associate this pairwise slope measurement with the delta value (second delta value + first delta value)/2.
 For each original time series and each derivative time series we include the following statistics as subject features:   
-The maximum measurement value  
-The minimum measurement value  
-The last measurement value  
-The mean measurement value  
-The number of measurement values 
-The sum of all measurement values  
-The delta value associated with the first measurement value  
-The delta value associated with the last measurement value  
-The mean of the squared values of all of the measurements  
-The standard deviation of the measurement values  
-The slope of the time series, defined as (last measurement value – first measurement value)/(last delta value – first delta value)
++ The maximum measurement value  
++ The minimum measurement value  
++ The last measurement value  
++ The mean measurement value  
++ The number of measurement values 
++ The sum of all measurement values  
++ The delta value associated with the first measurement value  
++ The delta value associated with the last measurement value  
++ The mean of the squared values of all of the measurements  
++ The standard deviation of the measurement values  
++ The slope of the time series, defined as (last measurement value – first measurement value)/(last delta value – first delta value)
 
 (Feature Engineering/Feature Engineering FVC and SVC.ipynb)
 
