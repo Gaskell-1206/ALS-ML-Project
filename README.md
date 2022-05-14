@@ -1,4 +1,4 @@
-# Predicting Amyotrophic Lateral Sclerosis Progression with Clinical Trial Data
+# Predict Amyotrophic Lateral Sclerosis Progression with Clinical Trial Data
 
 # Data Cleansing
 ## General Preprocessing
